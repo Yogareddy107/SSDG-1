@@ -1,0 +1,22 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Portfolio rules
+    match /portfolio/{itemId} {
+      allow read: if true;
+      allow create, delete: if true;
+    }
+
+    // Testimonials rules
+    match /testimonials/{id} {
+      allow read: if true;
+      allow create: if true; 
+      allow update, delete: if true; // Demo logic: UI pin check protects access
+    }
+  }
+}

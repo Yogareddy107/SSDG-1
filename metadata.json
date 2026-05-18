@@ -1,0 +1,6 @@
+{
+  "name": "Sri Siva Durga Photo Studio & Graphics",
+  "description": "Professional photography, digital flex printing, and high-quality graphics services in Koilkuntla.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

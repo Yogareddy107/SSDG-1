@@ -1,0 +1,55 @@
+{
+  "entities": {
+    "PortfolioItem": {
+      "title": "Portfolio Item",
+      "description": "A single piece of work in the portfolio.",
+      "type": "object",
+      "properties": {
+        "img": {
+          "type": "string",
+          "description": "Base64 encoded image or video data."
+        },
+        "type": {
+          "type": "string",
+          "enum": ["image", "video"],
+          "description": "The media type."
+        },
+        "category": {
+          "type": "string",
+          "enum": ["Photography", "Flex Prints", "Graphics Design"],
+          "description": "The type of work."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the item was uploaded."
+        }
+      },
+      "required": ["img", "category", "createdAt"]
+    },
+    "Testimonial": {
+      "title": "Testimonial",
+      "description": "Customer feedback left on the site.",
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "author": { "type": "string" },
+        "role": { "type": "string" },
+        "rating": { "type": "number" },
+        "approved": { "type": "boolean", "default": false },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["text", "author", "createdAt", "approved"]
+    }
+  },
+  "firestore": {
+    "portfolio": {
+      "schema": "PortfolioItem",
+      "description": "Collection of all portfolio items."
+    },
+    "testimonials": {
+      "schema": "Testimonial",
+      "description": "Collection of customer testimonials."
+    }
+  }
+}
