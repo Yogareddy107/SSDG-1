@@ -1,0 +1,21 @@
+{
+  "name": "Sri Siva Durga Photo Studio",
+  "short_name": "Siva Durga",
+  "description": "Professional photography and digital printing services in Koilkuntla.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#f97316",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
