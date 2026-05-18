@@ -10,6 +10,11 @@ import {
   serverTimestamp, query, orderBy 
 } from "firebase/firestore";
 
+import heroImg from "./assets/images/hero_photography_1779088821005.png";
+import weddingImg from "./assets/images/traditional_wedding_capture_1779088877270.png";
+import flexImg from "./assets/images/flex_printing_setup_1779088837437.png";
+import graphicImg from "./assets/images/graphic_design_desk_1779088856851.png";
+
 interface PortfolioItem {
   id: string;
   img: string;
@@ -333,7 +338,7 @@ export default function App() {
       <section id="hero" className="relative h-screen flex flex-col justify-center items-center overflow-hidden px-6">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/src/assets/images/hero_photography_1779088821005.png" 
+            src={heroImg} 
             alt="Photography Studio" 
             className="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000"
             referrerPolicy="no-referrer"
@@ -388,19 +393,19 @@ export default function App() {
               title: "Photography", 
               desc: "Specialized in wedding, portrait, and commercial shoots with state-of-the-art equipment.",
               icon: <Camera className="w-8 h-8" />,
-              img: "/src/assets/images/traditional_wedding_capture_1779088877270.png"
+              img: weddingImg
             },
             { 
               title: "Flex Printing", 
               desc: "High-quality digital flex printing for banners, billboards, and promotional materials.",
               icon: <Printer className="w-8 h-8" />,
-              img: "/src/assets/images/flex_printing_setup_1779088837437.png"
+              img: flexImg
             },
             { 
               title: "Graphics Design", 
               desc: "Creative visual solutions for branding, social media, and business identity.",
               icon: <Palette className="w-8 h-8" />,
-              img: "/src/assets/images/graphic_design_desk_1779088856851.png"
+              img: graphicImg
             },
           ].map((service, i) => (
             <motion.div 
